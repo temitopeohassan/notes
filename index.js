@@ -3,22 +3,57 @@ const app = express()
 
 app.use(express.json())
 
-let notes = [
+let notes =[
   {
     id: 1,
-    content: "HTML is easy",
-    important: true
+    type: 'IRISH PUB',
+    title: 'Waxy O\' Connors\'s London',
+    startingTime: '2023-09-21 15:00',
+    image: require('../assets/images/event_1.png'),
+    description:
+      'Non exercitation ullamco reprehenderit incididunt. Officia incididunt id exercitation velit aliqua ut deserunt do non. Aliquip sunt dolor enim occaecat ullamco id consectetur .',
+      region:  "'latitude: 37.58817','longitude: -122.4903973','latitudeDelta: 0.005','longitudeDelta: 0.005 * (SIZES.width / SIZES.height)'"
   },
   {
     id: 2,
-    content: "Browser can execute only JavaScript",
-    important: false
+    type: 'AFRICAN RESTAURANT',
+    title: 'Enish',
+    startingTime: '2023-09-25 15:00',
+    image: require('../assets/images/event_2.png'),
+    description:
+      'Lorem ipsum dolor sit amet, consectetur elit adipiscing elit. Venenatis pulvinar a amet in, suspendisse vitae, posuere eu tortor et. Und commodo, fermentum, mauris leo eget.',
+  region:  "'latitude: 37.58817','longitude: -122.4903973','latitudeDelta: 0.005','longitudeDelta: 0.005 * (SIZES.width / SIZES.height)'"
+  },
+   {
+    id: 3,
+    type: 'PUB',
+    title: 'The Royal Oak',
+    startingTime: '2023-10-21 11:00',
+    image: require('../assets/images/event_3.png'),
+    description:
+      'Non exercitation ullamco reprehenderit incididunt. Officia incididunt id exercitation velit aliqua ut deserunt do non. Aliquip sunt dolor enim occaecat ullamco id consectetur .',
+  region:  "'latitude: 37.58817','longitude: -122.4903973','latitudeDelta: 0.005','longitudeDelta: 0.005 * (SIZES.width / SIZES.height)'"
   },
   {
-    id: 3,
-    content: "GET and POST are the most important methods of HTTP protocol",
-    important: true
-  }
+    id: 4,
+    type: 'AFRICAN RESTAURANT',
+    title: 'Akoko',
+    startingTime: '2023-08-25 12:00',
+    image: require('../assets/images/event_4.png'),
+    description:
+      'Lorem ipsum dolor sit amet, consectetur elit adipiscing elit. Venenatis pulvinar a amet in, suspendisse vitae, posuere eu tortor et. Und commodo, fermentum, mauris leo eget.',
+  region:  "'latitude: 37.58817','longitude: -122.4903973','latitudeDelta: 0.005','longitudeDelta: 0.005 * (SIZES.width / SIZES.height)'"
+  },
+   {
+    id: 5,
+    type: 'BAR & LOUNGE',
+    title: 'Ku Lounge',
+    startingTime: '2023-09-21 09:10',
+    image: require('../assets/images/event_5.png'),
+    description:
+      'Non exercitation ullamco reprehenderit incididunt. Officia incididunt id exercitation velit aliqua ut deserunt do non. Aliquip sunt dolor enim occaecat ullamco id consectetur .',
+  region:  "'latitude: 37.58817','longitude: -122.4903973','latitudeDelta: 0.005','longitudeDelta: 0.005 * (SIZES.width / SIZES.height)'"
+  },
 ]
 
 app.get('/', (req, res) => {
